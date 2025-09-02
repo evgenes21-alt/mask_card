@@ -5,6 +5,8 @@ datas = [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.5123
 
 
 def filter_by_state(transactions: list[dict], state: str = "EXECUTED") -> list[dict]:
+    '''Функция, которая принимает список словарей и опционально значение для ключа (по умолчанию 'EXECUTED').'''
+    '''Функция возвращает новый список словарей, содержащий только те словари, у которых ключ state соответствует указанному значению.'''
 
     return [transaction for transaction in transactions if transaction['state'] == state]
 
@@ -17,6 +19,9 @@ from datetime import datetime
 
 
 def sort_by_date(transactions, reverse=True):
+    '''Функция,  которая принимает список словарей и необязательный параметр, задающий порядок сортировки (по умолчанию — убывание).'''
+    '''Функция должна возвращать новый список, отсортированный по дате (date).'''
+
     return sorted(transactions, key=lambda x: datetime.fromisoformat(x['date']), reverse=reverse)
 print(datas)
 
