@@ -11,7 +11,9 @@
 ```
 git clone https://github.com/evgenes21-alt/mask_card.git
 ```
-
+```commandline
+pip install -r requirements.txt
+```
 ## Документация:
 
 Дополнительную информацию о структуре проекта и API можно найти в [документации](docs/README.md).
